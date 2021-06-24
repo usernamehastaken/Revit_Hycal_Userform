@@ -8,3 +8,4 @@ C:\Users\chenxinxin.TCDRILAN\source\repos\Revit_Hycal_Userform\obj\Debug\Revit_H
 C:\Users\chenxinxin.TCDRILAN\source\repos\Revit_Hycal_Userform\obj\Debug\Revit_Hycal_Userform.exe
 C:\Users\chenxinxin.TCDRILAN\source\repos\Revit_Hycal_Userform\obj\Debug\Revit_Hycal_Userform.pdb
 C:\Users\chenxinxin.TCDRILAN\source\repos\Revit_Hycal_Userform\obj\Debug\Revit_Hycal_Userform.Main_From.resources
+C:\Users\chenxinxin.TCDRILAN\source\repos\Revit_Hycal_Userform\obj\Debug\Revit_Hycal_Userform.About.resources
