@@ -52,6 +52,13 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="Basic_Initial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic_Initial.Designer.cs">
+      <DependentUpon>Basic_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataElement.cs" />
     <Compile Include="Main_From.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +83,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\DataElement.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
