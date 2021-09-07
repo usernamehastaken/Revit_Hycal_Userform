@@ -31,15 +31,19 @@ namespace Revit_Hycal_Userform
         {
             this.components = new System.ComponentModel.Container();
             this.menu = new System.Windows.Forms.MenuStrip();
-            this.File_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.New_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Save_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Open_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Exit_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Edit_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Initial_ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.About_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.File = new System.Windows.Forms.ToolStripMenuItem();
+            this.New = new System.Windows.Forms.ToolStripMenuItem();
+            this.Save = new System.Windows.Forms.ToolStripMenuItem();
+            this.Open = new System.Windows.Forms.ToolStripMenuItem();
+            this.Exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.Edit = new System.Windows.Forms.ToolStripMenuItem();
+            this.Cal = new System.Windows.Forms.ToolStripMenuItem();
+            this.Initial = new System.Windows.Forms.ToolStripMenuItem();
+            this.About = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.WFBasic = new System.Windows.Forms.ToolStripMenuItem();
+            this.Database = new System.Windows.Forms.ToolStripMenuItem();
+            this.SCBasic = new System.Windows.Forms.ToolStripMenuItem();
             this.noDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.airflowDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.widthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,8 +59,6 @@ namespace Revit_Hycal_Userform
             this.totalPressureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataElementBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Cal_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DatabaseView_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataElementBindingSource)).BeginInit();
@@ -65,72 +67,81 @@ namespace Revit_Hycal_Userform
             // menu
             // 
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.File_ToolStripMenuItem,
-            this.Edit_ToolStripMenuItem,
-            this.Initial_ToolStripMenuItem1,
-            this.About_ToolStripMenuItem});
+            this.File,
+            this.Edit,
+            this.Initial,
+            this.Database,
+            this.About});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(1128, 25);
             this.menu.TabIndex = 0;
             // 
-            // File_ToolStripMenuItem
+            // File
             // 
-            this.File_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.New_ToolStripMenuItem,
-            this.Save_ToolStripMenuItem,
-            this.Open_ToolStripMenuItem,
-            this.Exit_ToolStripMenuItem});
-            this.File_ToolStripMenuItem.Name = "File_ToolStripMenuItem";
-            this.File_ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.File_ToolStripMenuItem.Text = "文件";
+            this.File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.New,
+            this.Save,
+            this.Open,
+            this.Exit});
+            this.File.Name = "File";
+            this.File.Size = new System.Drawing.Size(44, 21);
+            this.File.Text = "文件";
             // 
-            // New_ToolStripMenuItem
+            // New
             // 
-            this.New_ToolStripMenuItem.Name = "New_ToolStripMenuItem";
-            this.New_ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.New_ToolStripMenuItem.Text = "新建工程";
+            this.New.Name = "New";
+            this.New.Size = new System.Drawing.Size(124, 22);
+            this.New.Text = "新建工程";
             // 
-            // Save_ToolStripMenuItem
+            // Save
             // 
-            this.Save_ToolStripMenuItem.Name = "Save_ToolStripMenuItem";
-            this.Save_ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.Save_ToolStripMenuItem.Text = "保存工程";
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(124, 22);
+            this.Save.Text = "保存工程";
             // 
-            // Open_ToolStripMenuItem
+            // Open
             // 
-            this.Open_ToolStripMenuItem.Name = "Open_ToolStripMenuItem";
-            this.Open_ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.Open_ToolStripMenuItem.Text = "打开工程";
-            this.Open_ToolStripMenuItem.Click += new System.EventHandler(this.Open_ToolStripMenuItem_Click);
+            this.Open.Name = "Open";
+            this.Open.Size = new System.Drawing.Size(124, 22);
+            this.Open.Text = "打开工程";
+            this.Open.Click += new System.EventHandler(this.Open_ToolStripMenuItem_Click);
             // 
-            // Exit_ToolStripMenuItem
+            // Exit
             // 
-            this.Exit_ToolStripMenuItem.Name = "Exit_ToolStripMenuItem";
-            this.Exit_ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.Exit_ToolStripMenuItem.Text = "退出程序";
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(124, 22);
+            this.Exit.Text = "退出程序";
             // 
-            // Edit_ToolStripMenuItem
+            // Edit
             // 
-            this.Edit_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Cal_ToolStripMenuItem,
-            this.DatabaseView_ToolStripMenuItem});
-            this.Edit_ToolStripMenuItem.Name = "Edit_ToolStripMenuItem";
-            this.Edit_ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.Edit_ToolStripMenuItem.Text = "计算";
+            this.Edit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Cal});
+            this.Edit.Name = "Edit";
+            this.Edit.Size = new System.Drawing.Size(44, 21);
+            this.Edit.Text = "计算";
             // 
-            // Initial_ToolStripMenuItem1
+            // Cal
             // 
-            this.Initial_ToolStripMenuItem1.Name = "Initial_ToolStripMenuItem1";
-            this.Initial_ToolStripMenuItem1.Size = new System.Drawing.Size(68, 21);
-            this.Initial_ToolStripMenuItem1.Text = "基础设置";
+            this.Cal.Name = "Cal";
+            this.Cal.Size = new System.Drawing.Size(172, 22);
+            this.Cal.Text = "局部阻力系数分析";
             // 
-            // About_ToolStripMenuItem
+            // Initial
             // 
-            this.About_ToolStripMenuItem.Name = "About_ToolStripMenuItem";
-            this.About_ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.About_ToolStripMenuItem.Text = "关于";
-            this.About_ToolStripMenuItem.Click += new System.EventHandler(this.About_ToolStripMenuItem_Click);
+            this.Initial.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.WFBasic,
+            this.SCBasic});
+            this.Initial.Name = "Initial";
+            this.Initial.Size = new System.Drawing.Size(68, 21);
+            this.Initial.Text = "基础配置";
+            // 
+            // About
+            // 
+            this.About.Name = "About";
+            this.About.Size = new System.Drawing.Size(44, 21);
+            this.About.Text = "关于";
+            this.About.Click += new System.EventHandler(this.About_ToolStripMenuItem_Click);
             // 
             // dataGridView
             // 
@@ -161,6 +172,26 @@ namespace Revit_Hycal_Userform
             this.dataGridView.RowTemplate.Height = 23;
             this.dataGridView.Size = new System.Drawing.Size(1128, 515);
             this.dataGridView.TabIndex = 1;
+            // 
+            // WFBasic
+            // 
+            this.WFBasic.Name = "WFBasic";
+            this.WFBasic.Size = new System.Drawing.Size(196, 22);
+            this.WFBasic.Text = "危废风管基本参数设置";
+            this.WFBasic.Click += new System.EventHandler(this.WFBasic_Click);
+            // 
+            // Database
+            // 
+            this.Database.Name = "Database";
+            this.Database.Size = new System.Drawing.Size(56, 21);
+            this.Database.Text = "数据库";
+            // 
+            // SCBasic
+            // 
+            this.SCBasic.Name = "SCBasic";
+            this.SCBasic.Size = new System.Drawing.Size(196, 22);
+            this.SCBasic.Text = "收尘风管基本参数设置";
+            this.SCBasic.Click += new System.EventHandler(this.SCBasic_Click);
             // 
             // noDataGridViewTextBoxColumn
             // 
@@ -264,18 +295,6 @@ namespace Revit_Hycal_Userform
             // 
             this.dataElementBindingSource.DataSource = typeof(Revit_Hycal_Userform.DataElement);
             // 
-            // Cal_ToolStripMenuItem
-            // 
-            this.Cal_ToolStripMenuItem.Name = "Cal_ToolStripMenuItem";
-            this.Cal_ToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.Cal_ToolStripMenuItem.Text = "局部阻力系数分析";
-            // 
-            // DatabaseView_ToolStripMenuItem
-            // 
-            this.DatabaseView_ToolStripMenuItem.Name = "DatabaseView_ToolStripMenuItem";
-            this.DatabaseView_ToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.DatabaseView_ToolStripMenuItem.Text = "数据库查看";
-            // 
             // Main_From
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -303,16 +322,16 @@ namespace Revit_Hycal_Userform
         #endregion
 
         private System.Windows.Forms.MenuStrip menu;
-        private System.Windows.Forms.ToolStripMenuItem File_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem New_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem Save_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem Open_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem Exit_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem Edit_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem About_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem File;
+        private System.Windows.Forms.ToolStripMenuItem New;
+        private System.Windows.Forms.ToolStripMenuItem Save;
+        private System.Windows.Forms.ToolStripMenuItem Open;
+        private System.Windows.Forms.ToolStripMenuItem Exit;
+        private System.Windows.Forms.ToolStripMenuItem Edit;
+        private System.Windows.Forms.ToolStripMenuItem About;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.BindingSource dataElementBindingSource;
-        private System.Windows.Forms.ToolStripMenuItem Initial_ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem Initial;
         private System.Windows.Forms.DataGridViewTextBoxColumn noDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn airflowDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn widthDataGridViewTextBoxColumn;
@@ -327,8 +346,10 @@ namespace Revit_Hycal_Userform
         private System.Windows.Forms.DataGridViewTextBoxColumn pjDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalPressureDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStripMenuItem Cal_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem DatabaseView_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Cal;
+        private System.Windows.Forms.ToolStripMenuItem WFBasic;
+        private System.Windows.Forms.ToolStripMenuItem Database;
+        private System.Windows.Forms.ToolStripMenuItem SCBasic;
     }
 }
 

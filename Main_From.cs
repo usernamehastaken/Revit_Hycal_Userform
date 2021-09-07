@@ -50,5 +50,18 @@ namespace Revit_Hycal_Userform
         {
             this.dataGridView.DataSource = dataElements;
         }
+
+        private void WFBasic_Click(object sender, EventArgs e)
+        {
+            Basic_Initial basic_Initial = new Basic_Initial();
+            basic_Initial.ShowDialog();
+        }
+
+        private void SCBasic_Click(object sender, EventArgs e)
+        {
+            Basic_Initial basic_Initial = new Basic_Initial();
+            basic_Initial.Text = "收尘风管基本参数设置";
+            basic_Initial.ShowDialog();
+        }
     }
 }
