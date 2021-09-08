@@ -85,14 +85,16 @@ namespace Revit_Hycal_Userform
             return de;
         }
 
-        public static double cal_DPressure(double MD,double V)
+        public static double cal_DPressure(double V)
         {
-            return MD * V * V / 2;
+            return doubleMDXZ* doubleMD * V * V / 2;
         }
 
         public static void cal_MDXZ(double p,double wd)
         {
             doubleMDXZ = 3.47 * p / (273 + wd)/1000/doubleMD;
         }
+
+
     }
 }

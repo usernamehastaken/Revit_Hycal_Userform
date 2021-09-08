@@ -30,6 +30,7 @@ namespace Revit_Hycal_Userform
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.CmdOK = new System.Windows.Forms.Button();
             this.MD = new System.Windows.Forms.TextBox();
             this.YDND = new System.Windows.Forms.TextBox();
@@ -39,12 +40,13 @@ namespace Revit_Hycal_Userform
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.CmdOK);
             this.groupBox1.Controls.Add(this.MD);
@@ -64,6 +66,16 @@ namespace Revit_Hycal_Userform
             this.groupBox1.Text = "基本参数";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 212);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "密度修正";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CmdOK
             // 
             this.CmdOK.Location = new System.Drawing.Point(283, 212);
@@ -76,7 +88,7 @@ namespace Revit_Hycal_Userform
             // 
             // MD
             // 
-            this.MD.Location = new System.Drawing.Point(188, 184);
+            this.MD.Location = new System.Drawing.Point(188, 174);
             this.MD.Name = "MD";
             this.MD.Size = new System.Drawing.Size(100, 21);
             this.MD.TabIndex = 7;
@@ -84,7 +96,7 @@ namespace Revit_Hycal_Userform
             // 
             // YDND
             // 
-            this.YDND.Location = new System.Drawing.Point(188, 137);
+            this.YDND.Location = new System.Drawing.Point(188, 128);
             this.YDND.Name = "YDND";
             this.YDND.Size = new System.Drawing.Size(100, 21);
             this.YDND.TabIndex = 6;
@@ -109,7 +121,7 @@ namespace Revit_Hycal_Userform
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 187);
+            this.label4.Location = new System.Drawing.Point(6, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 12);
             this.label4.TabIndex = 3;
@@ -119,7 +131,7 @@ namespace Revit_Hycal_Userform
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 140);
+            this.label3.Location = new System.Drawing.Point(6, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 12);
             this.label3.TabIndex = 2;
@@ -146,15 +158,14 @@ namespace Revit_Hycal_Userform
             this.label1.Text = "管壁粗糙度修正系数：";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // label5
             // 
-            this.button1.Location = new System.Drawing.Point(3, 212);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "密度修正";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 198);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(245, 12);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "(如果进行密度修正，则此处设置为1.197803)";
             // 
             // Basic_Initial
             // 
@@ -186,5 +197,6 @@ namespace Revit_Hycal_Userform
         private System.Windows.Forms.TextBox GBCCDXZXS;
         private System.Windows.Forms.Button CmdOK;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
     }
 }

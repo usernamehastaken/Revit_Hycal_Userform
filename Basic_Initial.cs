@@ -48,6 +48,8 @@ namespace Revit_Hycal_Userform
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.MD.Text = "1.197803";
+            //this.MD.Enabled = false;
             MDXZ mDXZ = new MDXZ();
             mDXZ.Show();
         }
