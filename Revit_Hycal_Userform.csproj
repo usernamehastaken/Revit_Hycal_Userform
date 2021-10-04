@@ -52,19 +52,38 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="Basic_Initial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic_Initial.Designer.cs">
+      <DependentUpon>Basic_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataElement.cs" />
     <Compile Include="Main_From.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main_From.Designer.cs">
       <DependentUpon>Main_From.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDXZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDXZ.Designer.cs">
+      <DependentUpon>MDXZ.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Basic_Initial.resx">
+      <DependentUpon>Basic_Initial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_From.resx">
       <DependentUpon>Main_From.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDXZ.resx">
+      <DependentUpon>MDXZ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -76,6 +95,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\DataElement.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
