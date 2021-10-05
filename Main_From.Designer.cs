@@ -39,11 +39,12 @@ namespace Revit_Hycal_Userform
             this.Edit = new System.Windows.Forms.ToolStripMenuItem();
             this.Cal = new System.Windows.Forms.ToolStripMenuItem();
             this.Initial = new System.Windows.Forms.ToolStripMenuItem();
+            this.WFBasic = new System.Windows.Forms.ToolStripMenuItem();
+            this.SCBasic = new System.Windows.Forms.ToolStripMenuItem();
+            this.Database = new System.Windows.Forms.ToolStripMenuItem();
             this.About = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.WFBasic = new System.Windows.Forms.ToolStripMenuItem();
-            this.Database = new System.Windows.Forms.ToolStripMenuItem();
-            this.SCBasic = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataElementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.noDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.airflowDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.widthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +59,6 @@ namespace Revit_Hycal_Userform
             this.pjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalPressureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataElementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataElementBindingSource)).BeginInit();
@@ -74,7 +74,7 @@ namespace Revit_Hycal_Userform
             this.About});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(1128, 25);
+            this.menu.Size = new System.Drawing.Size(1128, 28);
             this.menu.TabIndex = 0;
             // 
             // File
@@ -85,32 +85,32 @@ namespace Revit_Hycal_Userform
             this.Open,
             this.Exit});
             this.File.Name = "File";
-            this.File.Size = new System.Drawing.Size(44, 21);
+            this.File.Size = new System.Drawing.Size(51, 24);
             this.File.Text = "文件";
             // 
             // New
             // 
             this.New.Name = "New";
-            this.New.Size = new System.Drawing.Size(124, 22);
+            this.New.Size = new System.Drawing.Size(138, 24);
             this.New.Text = "新建工程";
             // 
             // Save
             // 
             this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(124, 22);
+            this.Save.Size = new System.Drawing.Size(138, 24);
             this.Save.Text = "保存工程";
             // 
             // Open
             // 
             this.Open.Name = "Open";
-            this.Open.Size = new System.Drawing.Size(124, 22);
+            this.Open.Size = new System.Drawing.Size(138, 24);
             this.Open.Text = "打开工程";
             this.Open.Click += new System.EventHandler(this.Open_ToolStripMenuItem_Click);
             // 
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(124, 22);
+            this.Exit.Size = new System.Drawing.Size(138, 24);
             this.Exit.Text = "退出程序";
             // 
             // Edit
@@ -118,13 +118,13 @@ namespace Revit_Hycal_Userform
             this.Edit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Cal});
             this.Edit.Name = "Edit";
-            this.Edit.Size = new System.Drawing.Size(44, 21);
+            this.Edit.Size = new System.Drawing.Size(51, 24);
             this.Edit.Text = "计算";
             // 
             // Cal
             // 
             this.Cal.Name = "Cal";
-            this.Cal.Size = new System.Drawing.Size(172, 22);
+            this.Cal.Size = new System.Drawing.Size(198, 24);
             this.Cal.Text = "局部阻力系数分析";
             // 
             // Initial
@@ -133,13 +133,33 @@ namespace Revit_Hycal_Userform
             this.WFBasic,
             this.SCBasic});
             this.Initial.Name = "Initial";
-            this.Initial.Size = new System.Drawing.Size(68, 21);
+            this.Initial.Size = new System.Drawing.Size(81, 24);
             this.Initial.Text = "基础配置";
+            // 
+            // WFBasic
+            // 
+            this.WFBasic.Name = "WFBasic";
+            this.WFBasic.Size = new System.Drawing.Size(228, 24);
+            this.WFBasic.Text = "危废风管基本参数设置";
+            this.WFBasic.Click += new System.EventHandler(this.WFBasic_Click);
+            // 
+            // SCBasic
+            // 
+            this.SCBasic.Name = "SCBasic";
+            this.SCBasic.Size = new System.Drawing.Size(228, 24);
+            this.SCBasic.Text = "收尘风管基本参数设置";
+            this.SCBasic.Click += new System.EventHandler(this.SCBasic_Click);
+            // 
+            // Database
+            // 
+            this.Database.Name = "Database";
+            this.Database.Size = new System.Drawing.Size(66, 24);
+            this.Database.Text = "数据库";
             // 
             // About
             // 
             this.About.Name = "About";
-            this.About.Size = new System.Drawing.Size(44, 21);
+            this.About.Size = new System.Drawing.Size(51, 24);
             this.About.Text = "关于";
             this.About.Click += new System.EventHandler(this.About_ToolStripMenuItem_Click);
             // 
@@ -173,25 +193,9 @@ namespace Revit_Hycal_Userform
             this.dataGridView.Size = new System.Drawing.Size(1128, 515);
             this.dataGridView.TabIndex = 1;
             // 
-            // WFBasic
+            // dataElementBindingSource
             // 
-            this.WFBasic.Name = "WFBasic";
-            this.WFBasic.Size = new System.Drawing.Size(196, 22);
-            this.WFBasic.Text = "危废风管基本参数设置";
-            this.WFBasic.Click += new System.EventHandler(this.WFBasic_Click);
-            // 
-            // Database
-            // 
-            this.Database.Name = "Database";
-            this.Database.Size = new System.Drawing.Size(56, 21);
-            this.Database.Text = "数据库";
-            // 
-            // SCBasic
-            // 
-            this.SCBasic.Name = "SCBasic";
-            this.SCBasic.Size = new System.Drawing.Size(196, 22);
-            this.SCBasic.Text = "收尘风管基本参数设置";
-            this.SCBasic.Click += new System.EventHandler(this.SCBasic_Click);
+            this.dataElementBindingSource.DataSource = typeof(Revit_Hycal_Userform.DataElement);
             // 
             // noDataGridViewTextBoxColumn
             // 
@@ -240,6 +244,7 @@ namespace Revit_Hycal_Userform
             this.vDataGridViewTextBoxColumn.DataPropertyName = "V";
             this.vDataGridViewTextBoxColumn.HeaderText = "V(m/s)";
             this.vDataGridViewTextBoxColumn.Name = "vDataGridViewTextBoxColumn";
+            this.vDataGridViewTextBoxColumn.ReadOnly = true;
             this.vDataGridViewTextBoxColumn.Width = 80;
             // 
             // rDataGridViewTextBoxColumn
@@ -247,6 +252,7 @@ namespace Revit_Hycal_Userform
             this.rDataGridViewTextBoxColumn.DataPropertyName = "R";
             this.rDataGridViewTextBoxColumn.HeaderText = "R(Pa)";
             this.rDataGridViewTextBoxColumn.Name = "rDataGridViewTextBoxColumn";
+            this.rDataGridViewTextBoxColumn.ReadOnly = true;
             this.rDataGridViewTextBoxColumn.Width = 80;
             // 
             // pyDataGridViewTextBoxColumn
@@ -254,6 +260,7 @@ namespace Revit_Hycal_Userform
             this.pyDataGridViewTextBoxColumn.DataPropertyName = "Py";
             this.pyDataGridViewTextBoxColumn.HeaderText = "Py(Pa)";
             this.pyDataGridViewTextBoxColumn.Name = "pyDataGridViewTextBoxColumn";
+            this.pyDataGridViewTextBoxColumn.ReadOnly = true;
             this.pyDataGridViewTextBoxColumn.Width = 80;
             // 
             // sigemaDataGridViewTextBoxColumn
@@ -268,6 +275,7 @@ namespace Revit_Hycal_Userform
             this.dPressureDataGridViewTextBoxColumn.DataPropertyName = "DPressure";
             this.dPressureDataGridViewTextBoxColumn.HeaderText = "动压(Pa)";
             this.dPressureDataGridViewTextBoxColumn.Name = "dPressureDataGridViewTextBoxColumn";
+            this.dPressureDataGridViewTextBoxColumn.ReadOnly = true;
             this.dPressureDataGridViewTextBoxColumn.Width = 80;
             // 
             // pjDataGridViewTextBoxColumn
@@ -275,6 +283,7 @@ namespace Revit_Hycal_Userform
             this.pjDataGridViewTextBoxColumn.DataPropertyName = "Pj";
             this.pjDataGridViewTextBoxColumn.HeaderText = "Pj(Pa)";
             this.pjDataGridViewTextBoxColumn.Name = "pjDataGridViewTextBoxColumn";
+            this.pjDataGridViewTextBoxColumn.ReadOnly = true;
             this.pjDataGridViewTextBoxColumn.Width = 80;
             // 
             // totalPressureDataGridViewTextBoxColumn
@@ -282,6 +291,7 @@ namespace Revit_Hycal_Userform
             this.totalPressureDataGridViewTextBoxColumn.DataPropertyName = "TotalPressure";
             this.totalPressureDataGridViewTextBoxColumn.HeaderText = "Py+Pj";
             this.totalPressureDataGridViewTextBoxColumn.Name = "totalPressureDataGridViewTextBoxColumn";
+            this.totalPressureDataGridViewTextBoxColumn.ReadOnly = true;
             this.totalPressureDataGridViewTextBoxColumn.Width = 80;
             // 
             // iDDataGridViewTextBoxColumn
@@ -290,10 +300,7 @@ namespace Revit_Hycal_Userform
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            // 
-            // dataElementBindingSource
-            // 
-            this.dataElementBindingSource.DataSource = typeof(Revit_Hycal_Userform.DataElement);
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Main_From
             // 
@@ -332,6 +339,10 @@ namespace Revit_Hycal_Userform
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.BindingSource dataElementBindingSource;
         private System.Windows.Forms.ToolStripMenuItem Initial;
+        private System.Windows.Forms.ToolStripMenuItem Cal;
+        private System.Windows.Forms.ToolStripMenuItem WFBasic;
+        private System.Windows.Forms.ToolStripMenuItem Database;
+        private System.Windows.Forms.ToolStripMenuItem SCBasic;
         private System.Windows.Forms.DataGridViewTextBoxColumn noDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn airflowDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn widthDataGridViewTextBoxColumn;
@@ -346,10 +357,6 @@ namespace Revit_Hycal_Userform
         private System.Windows.Forms.DataGridViewTextBoxColumn pjDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalPressureDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStripMenuItem Cal;
-        private System.Windows.Forms.ToolStripMenuItem WFBasic;
-        private System.Windows.Forms.ToolStripMenuItem Database;
-        private System.Windows.Forms.ToolStripMenuItem SCBasic;
     }
 }
 
