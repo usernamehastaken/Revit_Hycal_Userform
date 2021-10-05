@@ -24,8 +24,13 @@ namespace Revit_Hycal_Userform
             dataElement.No = 1;
             dataElement.Airflow = 123456;
             dataElement.ID = "1265454112";
+            DataElement dataElement1 = new DataElement();
+            dataElement1.No = 1;
+            dataElement1.Airflow = 123456;
+            dataElement1.ID = "1265454112";
             IList<DataElement> dataElements = new List<DataElement>();
             dataElements.Add(dataElement);
+            dataElements.Add(dataElement1);
             this.dataGridView.DataSource = dataElements;
             //this.d
         }
@@ -49,6 +54,19 @@ namespace Revit_Hycal_Userform
         public void showDataGridView(IList<DataElement> dataElements)///只暴露方法
         {
             this.dataGridView.DataSource = dataElements;
+        }
+
+        private void WFBasic_Click(object sender, EventArgs e)
+        {
+            Basic_Initial basic_Initial = new Basic_Initial();
+            basic_Initial.ShowDialog();
+        }
+
+        private void SCBasic_Click(object sender, EventArgs e)
+        {
+            Basic_Initial basic_Initial = new Basic_Initial();
+            basic_Initial.Text = "收尘风管基本参数设置";
+            basic_Initial.ShowDialog();
         }
     }
 }
