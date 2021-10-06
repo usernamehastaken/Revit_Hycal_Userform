@@ -18,7 +18,7 @@ namespace Revit_Hycal_Userform
         public float V { get; set; } = 0;
         public float R { get; set; } = 0;
         public float Py { get; set; } = 0;
-        public float Sigema { get; set; } = 0;
+        public float kSai { get; set; } = 0;
         public float DPressure { get; set; } = 0;
         public float Pj { get; set; } = 0;
         public float TotalPressure { get; set; } = 0;
