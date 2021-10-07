@@ -37,3 +37,6 @@ C:\Users\c'x'x\source\repos\Revit_Hycal_Userform\obj\Debug\Revit_Hycal_Userform.
 C:\Users\c'x'x\source\repos\Revit_Hycal_Userform\obj\Debug\Revit_Hycal_Userform.csproj.CoreCompileInputs.cache
 C:\Users\c'x'x\source\repos\Revit_Hycal_Userform\obj\Debug\Revit_Hycal_Userform.exe
 C:\Users\c'x'x\source\repos\Revit_Hycal_Userform\obj\Debug\Revit_Hycal_Userform.pdb
+C:\Users\c'x'x\source\repos\Revit_Hycal_Userform\bin\Debug\RevitAPI.dll
+C:\Users\c'x'x\source\repos\Revit_Hycal_Userform\bin\Debug\RevitAPIUI.dll
+C:\Users\c'x'x\source\repos\Revit_Hycal_Userform\obj\Debug\Revit_Hycal_Userform.csproj.CopyComplete

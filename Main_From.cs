@@ -17,13 +17,14 @@ namespace Revit_Hycal_Userform
 {
     public partial class Main_From : System.Windows.Forms.Form
     {
-        public string currentFileName = "";
         public Main_From()
         {
             //this.Width = this.dataGridView1.Width;
             InitializeComponent();
+            DataGridView dataGridView = new DataGridView();
+            this.components.Add(dataGridView);
         }
-
+        #region//关于窗体，不用修改
         public void Show_About()
         {
             About about = new About();
@@ -34,33 +35,7 @@ namespace Revit_Hycal_Userform
         {
             Show_About();
         }
+        #endregion
 
-
-        private void Open_ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            userform_Util.OpenFile(this);
-        }
-        public void showDataGridView(IList<DataElement> dataElements)///只暴露方法
-        {
-            this.dataGridView.DataSource = dataElements;
-        }
-
-        private void WFBasic_Click(object sender, EventArgs e)
-        {
-            Basic_Initial basic_Initial = new Basic_Initial();
-            basic_Initial.ShowDialog();
-        }
-
-        private void SCBasic_Click(object sender, EventArgs e)
-        {
-            Basic_Initial basic_Initial = new Basic_Initial();
-            basic_Initial.Text = "收尘风管基本参数设置";
-            basic_Initial.ShowDialog();
-        }
-
-        private void 拾取管道ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            userform_Util.del_pipeline();
-        }
     }
 }

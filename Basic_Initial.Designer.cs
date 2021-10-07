@@ -84,7 +84,7 @@ namespace Revit_Hycal_Userform
             this.CmdOK.TabIndex = 8;
             this.CmdOK.Text = "确定";
             this.CmdOK.UseVisualStyleBackColor = true;
-            this.CmdOK.Click += new System.EventHandler(this.CmdOK_Click);
+            //this.CmdOK.Click += new System.EventHandler(this.CmdOK_Click);
             // 
             // MD
             // 
