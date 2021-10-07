@@ -9,30 +9,19 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Autodesk.Revit.Attributes;
+using Autodesk.Revit.DB;
+using Autodesk.Revit.UI;
 
 namespace Revit_Hycal_Userform
 {
-    public partial class Main_From : Form
+    public partial class Main_From : System.Windows.Forms.Form
     {
         public string currentFileName = "";
         public Main_From()
         {
             //this.Width = this.dataGridView1.Width;
             InitializeComponent();
-            //test
-            DataElement dataElement = new DataElement();
-            dataElement.No = 1;
-            dataElement.Airflow = 123456;
-            dataElement.ID = "1265454112";
-            DataElement dataElement1 = new DataElement();
-            dataElement1.No = 1;
-            dataElement1.Airflow = 123456;
-            dataElement1.ID = "1265454112";
-            IList<DataElement> dataElements = new List<DataElement>();
-            dataElements.Add(dataElement);
-            dataElements.Add(dataElement1);
-            this.dataGridView.DataSource = dataElements;
-            //this.d
         }
 
         public void Show_About()
@@ -49,7 +38,7 @@ namespace Revit_Hycal_Userform
 
         private void Open_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            userform_Util.showDataElements(this);
+            userform_Util.OpenFile(this);
         }
         public void showDataGridView(IList<DataElement> dataElements)///只暴露方法
         {
@@ -67,6 +56,11 @@ namespace Revit_Hycal_Userform
             Basic_Initial basic_Initial = new Basic_Initial();
             basic_Initial.Text = "收尘风管基本参数设置";
             basic_Initial.ShowDialog();
+        }
+
+        private void 拾取管道ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            userform_Util.del_pipeline();
         }
     }
 }
